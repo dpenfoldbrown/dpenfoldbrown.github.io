@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>dpenfoldbrown: index</title>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto+Mono:wght@300;400;500;700&display=swap" rel="stylesheet">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        :root {
+            --primary-color: #a3906a;
+            --secondary-color: #c4b08a;
+            --accent-color: #8b7355;
+            --warning-color: #d4c5a9;
+            --background: #faf9f7;
+            --surface: #ffffff;
+            --text-primary: #5d5548;
+            --text-secondary: #8b8074;
+            --border-color: #e6e0d4;
+        }
+
+        body {
+            font-family: 'Roboto Mono', monospace;
+            background: linear-gradient(135deg, var(--background) 0%, #f5f3f0 100%);
+            color: var(--text-primary);
+            min-height: 100vh;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            padding: 2rem;
+        }
+
+        .container {
+            max-width: 800px;
+            width: 100%;
+            padding: 4rem 2rem;
+        }
+
+        .header {
+            text-align: center;
+            margin-bottom: 3rem;
+        }
+
+        .title {
+            font-size: 2.5rem;
+            font-weight: 500;
+            color: var(--text-primary);
+            margin-bottom: 0.5rem;
+            letter-spacing: -0.025em;
+        }
+
+        .title .username {
+            color: var(--primary-color);
+            font-weight: 700;
+        }
+
+        .title .separator {
+            color: var(--text-secondary);
+            margin: 0 0.5rem;
+        }
+
+        .subtitle {
+            color: var(--text-secondary);
+            font-size: 1rem;
+            font-weight: 300;
+        }
+
+        .nav-section {
+            margin-top: 2rem;
+        }
+
+        .nav-title {
+            font-size: 1.25rem;
+            color: var(--text-primary);
+            margin-bottom: 1.5rem;
+            font-weight: 500;
+            text-align: center;
+        }
+
+        .nav-links {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 1rem;
+        }
+
+        .nav-link {
+            display: block;
+            padding: 1rem 1.5rem;
+            background: var(--background);
+            border: 1px solid var(--border-color);
+            border-radius: 8px;
+            color: var(--text-secondary);
+            text-decoration: none;
+            font-weight: 400;
+            transition: all 0.3s ease;
+            text-align: center;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .nav-link::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: -100%;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(90deg, transparent, rgba(255,255,255,0.1), transparent);
+            transition: left 0.5s ease;
+        }
+
+        .nav-link:hover {
+            transform: translateY(-2px);
+            border-color: var(--primary-color);
+            color: var(--text-primary);
+            box-shadow: 0 10px 25px -5px rgba(99, 102, 241, 0.2);
+        }
+
+        .nav-link:hover::before {
+            left: 100%;
+        }
+
+        .nav-link:nth-child(1):hover {
+            border-color: var(--primary-color);
+            box-shadow: 0 10px 25px -5px rgba(99, 102, 241, 0.2);
+        }
+
+        .nav-link:nth-child(2):hover {
+            border-color: var(--secondary-color);
+            box-shadow: 0 10px 25px -5px rgba(236, 72, 153, 0.2);
+        }
+
+        .nav-link:nth-child(3):hover {
+            border-color: var(--accent-color);
+            box-shadow: 0 10px 25px -5px rgba(16, 185, 129, 0.2);
+        }
+
+        .nav-link:nth-child(4):hover {
+            border-color: var(--warning-color);
+            box-shadow: 0 10px 25px -5px rgba(245, 158, 11, 0.2);
+        }
+
+        .footer {
+            margin-top: 3rem;
+            text-align: center;
+            color: var(--text-secondary);
+            font-size: 0.875rem;
+            font-weight: 300;
+        }
+
+        @media (max-width: 640px) {
+            .container {
+                padding: 2rem 1.5rem;
+            }
+            
+            .title {
+                font-size: 2rem;
+            }
+            
+            .nav-links {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <h1 class="title">
+                <span class="username">dpenfoldbrown</span><span class="separator">:</span>index
+            </h1>
+        </div>
+
+        <div class="nav-section">
+            <div class="nav-links">
+                <!-- Add your navigation links here -->
+            </div>
+        </div>
+    </div>
+</body>
+</html>
